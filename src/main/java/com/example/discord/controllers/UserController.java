@@ -12,6 +12,12 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
 
+    @GetMapping("/test")
+    public String testEndpoint() {
+        return "Test successful!";
+    }
+
+
     // POST method to register a new user
     @PostMapping("/register")
     public String registerUser(@RequestBody User user) {
